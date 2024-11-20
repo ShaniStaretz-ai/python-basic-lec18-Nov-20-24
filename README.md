@@ -28,12 +28,18 @@
       ```
       therefore the solution, return the changed new list and return it to the same sent input list
     * to clean the list in a function:
-  ```
-  def clear_list(l1:list)->None:
-  l1.clear()
-  ```
-  the list itself will be empty and its pointer will not change
-
+      ```
+      def clear_list(l1:list)->None:
+          l1.clear()
+      ```
+      the list itself will be empty and its pointer will not change
+    * same in dictionary:
+      ```
+      def add(dic1):
+        dic1.setdefault("new_key",10)
+      add({})# will change to {new_key:10}
+      ```
+      
 ## extra subjects:
 
 * if the dictionary is a dictionary of functions, it is custom that most of the functions will be with the same

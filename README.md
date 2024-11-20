@@ -39,8 +39,58 @@
         dic1.setdefault("new_key",10)
       add({})# will change to {new_key:10}
       ```
-      
+* tuple:  a collection like list, but can't can it *at all*.
+  * tuple is faster in performance and less in the memory.
+  * always start with tuple and then change if needed.
+  * knowing this parameter will never change (best practice) 
+  * create tuple:
+     ```
+     tup:tuple[int,int,int,int]=(1,3,5,4) #declear each type of the values
+     tup1:tuple[int]=(1,)#of 1 value
+     ```
+  * access content of tuple:
+    ```
+    print(tup[0])#print: 1
+    ```
+  * to change a tuple content, then have a tuple of complex collection and change it within the tuple.
+    ```
+    tup2:tuple[list[int],int]=([1,2,3],3)
+    tup2[0].clear()
+    print(tup2) #prints ([], 3)
+    ```
+  * comprehension: 
+  ```
+  print(tuple(x for x in range(10)))
+  #print : (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  ```
+  * functions:
+    * count()- like in list
+    * index(value)- return the index of the value in the tuple
+    * min/max/mean/sum
+    * any/all
+    * sorted(tuple)-tuple(sorted(numbers,key lambda pair))- create a new sorted list then convert to tuple,not changing the origin
+    * join tuples:tuple1+tuple2= returns new tuple in the same sort=(...tuple1,...tuple2)
+    * multiple t*3= returns new tuple= (...t,...t,...t)
+    * 3 in tuple - returns boolean value.
+    * convert tuple to list/dictionary tuple()
+    * zip(l1/tuple,l2/tuple)- zip from each couple of values, the zip combine then to 1 couple -need to surround it with the final structure:
+      ```
+      tuple(zip(tuple1,tuple2))
+      list(zip(tuple1,tuple2))
+      dictionary(zip(tuple1,tuple2))
+      ```
+      if there is only if the there is a value:
+      ```
+      l1=[1,2,3,4]
+      l2= [1,2,3]
+      tuple1=tuple(zip(l1,l2))#((1,1),(2,2),(3,3)) #4 dont have a mate to join in the zip
+      ```
+  * each item in dict.items() is a tuple.
+  
+  * reference: https://www.geeksforgeeks.org/python-tuple-function/
+
 ## extra subjects:
+ * mutable/immutable - can be changed/cannot be changed.
 
 * if the dictionary is a dictionary of functions, it is custom that most of the functions will be with the same
   signature.

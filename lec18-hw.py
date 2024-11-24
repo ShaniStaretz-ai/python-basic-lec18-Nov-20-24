@@ -21,9 +21,6 @@ def join_shared_tuples(tuple1: tuple[int, ...], tuple2: tuple[int, ...]) -> tupl
     for t in tuple1:
         if t in tuple2:
             result += (t,)
-    for t in tuple2:
-        if t in tuple1 and not t in result:
-            result += (t,)
     return result
 
 
@@ -31,12 +28,10 @@ def join_shared_tuples(tuple1: tuple[int, ...], tuple2: tuple[int, ...]) -> tupl
 def join_unique_tuples(tuple1: tuple[int, ...], tuple2: tuple[int, ...]) -> tuple[int, ...]:
     shared_t: tuple[int, ...] = join_shared_tuples(tuple1, tuple2)
     result: tuple = tuple()
-    for t in tuple1:
+    for t in tuple1+tuple2:
         if not t in shared_t:
             result += (t,)
-    for t in tuple2:
-        if not t in shared_t:
-            result += (t,)
+
     return result
 
 

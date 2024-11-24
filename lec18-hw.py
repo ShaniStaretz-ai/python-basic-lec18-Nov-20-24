@@ -69,7 +69,7 @@ print(f"the multiple of tuple {(1, 2)},  {2} times is:", multiple_tuple((1, 2), 
 
 
 # j
-def remove_tuple_value(t: tuple[int, ...], value):
+def remove_tuple_value(t: tuple[int, ...], value)-> tuple[int, ...]:
     return tuple(x for x in t if x != value)
 
 

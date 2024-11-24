@@ -92,5 +92,4 @@
 ## extra subjects:
  * mutable/immutable - can be changed/cannot be changed.
 
-* if the dictionary is a dictionary of functions, it is custom that most of the functions will be with the same
-  signature.
+* if the dictionary is a dictionary of functions, it is custom that most of the functions will be with the same signature.

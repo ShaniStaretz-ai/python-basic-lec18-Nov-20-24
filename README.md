@@ -39,7 +39,7 @@
         dic1.setdefault("new_key",10)
       add({})# will change to {new_key:10}
       ```
-* tuple:  a collection like list, but can't can it *at all*.
+* tuple:  a collection like list, but can't change it *at all*.
   * tuple is faster in performance and less in the memory.
   * always start with tuple and then change if needed.
   * knowing this parameter will never change (best practice) 
